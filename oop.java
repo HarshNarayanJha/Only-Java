@@ -6,6 +6,11 @@ class Person {
 
     static int numEyes;
 
+    static void evolve() {
+        System.out.println("Evolving...");
+        numEyes++;
+    }
+
     void setAge(int age) {
         if (age < 0) {
             System.out.println("You are not yet born");
@@ -73,6 +78,7 @@ class oop {
         }
 
         System.out.println(Person.numEyes);
-
+        Person.evolve();
+        System.out.println(Person.numEyes);
     }
 }
