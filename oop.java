@@ -8,6 +8,18 @@ class Person {
 
     final static int MAX_AGE = 60;
 
+    Person(String name, int age, float assets) {
+        this.name = name;
+        this.age = age;
+        this.assets = assets;
+    }
+
+    Person(String name) {
+        this.name = name;
+        age = 0;
+        assets = 0;
+    }
+
     static void evolve() {
         System.out.println("Evolving...");
         numEyes++;
@@ -56,16 +68,9 @@ class oop {
     public static void main(String args[]) {
         Person.numEyes = 2;
 
-        Person person1 = new Person();
-        Person person2 = new Person();
-
-        person1.name = "Achu";
-        person1.setAge(20);
-        person1.assets = 50.0f;
-
-        person2.name = "Satyam";
-        person2.setAge(17);
-        person2.assets = 40099000.0f;
+        Person person1 = new Person("Achu", 20, 50.0f);
+        Person person2 = new Person("Satyam", 17, 40099000.0f);
+        Person per3 = new Person("Ansh");
 
         System.out.println(person1);
         person1.birthday();
@@ -90,5 +95,7 @@ class oop {
         System.out.println("Person 1 is Dead : " + person1.amIDead());
         person2.setAge(100);
         System.out.println("Person 2 is Dead : " + person2.amIDead());
+
+        System.out.println(per3);
     }
 }
