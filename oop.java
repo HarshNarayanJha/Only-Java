@@ -6,9 +6,15 @@ class Person {
 
     static int numEyes;
 
+    final static int MAX_AGE = 60;
+
     static void evolve() {
         System.out.println("Evolving...");
         numEyes++;
+    }
+
+    boolean amIDead() {
+        return age > MAX_AGE;
     }
 
     void setAge(int age) {
@@ -80,5 +86,9 @@ class oop {
         System.out.println(Person.numEyes);
         Person.evolve();
         System.out.println(Person.numEyes);
+
+        System.out.println("Person 1 is Dead : " + person1.amIDead());
+        person2.setAge(100);
+        System.out.println("Person 2 is Dead : " + person2.amIDead());
     }
 }
