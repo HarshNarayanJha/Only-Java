@@ -8,6 +8,10 @@ class Person {
 
     final static int MAX_AGE = 60;
 
+    Person() {
+
+    }
+
     Person(String name, int age, float assets) {
         this.name = name;
         this.age = age;
