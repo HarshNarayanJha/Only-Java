@@ -42,6 +42,8 @@ class Cat extends Animal {
     @Override
     public void makeNoise() {
         // Call the parent makeNoise implementation
+        // can also assign to variables using super
+        // like super.name = "Something";
         super.makeNoise();
         System.out.println("Meow Meow");
     }

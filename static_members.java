@@ -2,6 +2,14 @@ class Car {
     static int mileage;
     private int fuel;
 
+    static {
+        // This is static block is like a constructor for the static vars/methods
+        // it runs once whenever the class is first instatiated
+        // i.e. when the class first loads up!
+        System.out.println("This is the static block");
+        mileage = 200;
+    }
+
     void setFuel(int fuel) {
         this.fuel = fuel;
     }
@@ -23,6 +31,9 @@ class Car {
 
 class static_members {
     public static void main(String args[]) {
+        // But we can call the static block using Class loader!
+        // Class.forName("Car");
+        // System.out.println("Car should be loaded by now!");
         Car car1 = new Car();
         Car car2 = new Car();
 
