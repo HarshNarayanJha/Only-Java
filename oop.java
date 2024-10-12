@@ -9,7 +9,12 @@ class Person {
     final static int MAX_AGE = 60;
 
     Person() {
-
+        // this keyword, just like the super keyword, can also be used to call any matching constructor
+        // from any constructor (raises error if not found)
+        // used for default setting
+        // needs's to be very first statement in the constructor
+        // can be called only in a constructor
+        this("Person XYZ", 0, 0);
     }
 
     Person(String name, int age, float assets) {
@@ -46,7 +51,7 @@ class Person {
     }
 
     void birthday() {
-        System.out.println("Happy Birthday!");
+        System.out.println("Happy Birthday! " + this.name);
         age++;
     }
 
@@ -101,5 +106,10 @@ class oop {
         System.out.println("Person 2 is Dead : " + person2.amIDead());
 
         System.out.println(per3);
+
+        Person infant = new Person();
+        infant.birthday();
+        System.out.println(infant.name);
+        System.out.println(infant.getAge());
     }
 }
