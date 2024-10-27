@@ -1,23 +1,24 @@
 @FunctionalInterface
 interface MyInterface {
-    void message();
+    void message(String name);
 }
 
 public class lambda_expression {
 
     public static void main(String[] args) {
-        MyInterface myInterface = () -> {
-            System.out.println("Hello World");
+        MyInterface myInterface = (name) -> {
+            System.out.println("Hello " + name);
         };
 
         MyInterface inlineClass = new MyInterface() {
             @Override
-            public void message() {
-                System.out.println("Hello from inline class");
+            public void message(String name) {
+                System.out.println("Hello from inline class " + name);
             }
         };
 
-        inlineClass.message();
-        myInterface.message();
+        String name = "Java";
+        inlineClass.message(name);
+        myInterface.message(name);
     }
 }
