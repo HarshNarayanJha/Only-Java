@@ -1,11 +1,7 @@
-import java.util.ArrayList;
-
 enum Days {
     MONDAY,
     TUESDAY,
-    WEB
-
-    ;
+    WEB,
 }
 
 class Animal {
@@ -64,6 +60,7 @@ class inheritence {
     }
 
     public static void main(String args[]) {
+        @SuppressWarnings("unused")
         Animal animal = new Animal("Satyam", 2);
         Dog dog = new Dog("Billy");
         Kangaroo kag = new Kangaroo("Kang");

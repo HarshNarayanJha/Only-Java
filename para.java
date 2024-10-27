@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 class para {
@@ -18,5 +17,7 @@ class para {
                 System.out.print("@" + e + "# ");
             }
         }
+
+        sc.close();
     }
 }

@@ -6,7 +6,7 @@ interface MyInterface {
 public class lambda_expression {
 
     public static void main(String[] args) {
-        MyInterface myInterface = (name) -> {
+        MyInterface myInterface = name -> {
             System.out.println("Hello " + name);
         };
 

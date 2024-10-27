@@ -1,4 +1,4 @@
-public class Animal {
+class Animal {
 
     int age;
     String name;
@@ -18,6 +18,7 @@ public class Animal {
         System.out.println("Munch Munch");
     }
 
+    @SuppressWarnings("unused")
     private void privateToMe() {
         System.out.println("Can't call me hehehe..");
     }
@@ -48,6 +49,7 @@ class Cat extends Animal {
         System.out.println("Meow Meow");
     }
 
+    @SuppressWarnings("unused")
     private void privateToMe() {
         // can't do this since private access
         // super.privateToMe();
@@ -63,6 +65,7 @@ class super_keyword {
         // Can't call this since private to Animal
         // cat.privateToMe();
 
+        @SuppressWarnings("unused")
         Cat cat2 = new Cat(23, "Kitty", "Fish");
     }
 }

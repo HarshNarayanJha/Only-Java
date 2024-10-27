@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 class sort_intersect {
+
     public static void main(String[] args) {
         int n, m;
         Scanner sc = new Scanner(System.in);
@@ -28,9 +29,9 @@ class sort_intersect {
         for (int i = 0; i < n; i++) {
             boolean swapped = false;
             for (int j = 0; j < n - 1; j++) {
-                if (arr1[j+1] < arr1[j]) {
-                    int t = arr1[j+1];
-                    arr1[j+1] = arr1[j];
+                if (arr1[j + 1] < arr1[j]) {
+                    int t = arr1[j + 1];
+                    arr1[j + 1] = arr1[j];
                     arr1[j] = t;
                     swapped = true;
                 }
@@ -41,9 +42,9 @@ class sort_intersect {
         for (int i = 0; i < n; i++) {
             boolean swapped = false;
             for (int j = 0; j < m - 1; j++) {
-                if (arr2[j+1] < arr2[j]) {
-                    int t = arr2[j+1];
-                    arr2[j+1] = arr2[j];
+                if (arr2[j + 1] < arr2[j]) {
+                    int t = arr2[j + 1];
+                    arr2[j + 1] = arr2[j];
                     arr2[j] = t;
                     swapped = true;
                 }
@@ -83,5 +84,7 @@ class sort_intersect {
         }
 
         System.out.println();
+
+        sc.close();
     }
 }
