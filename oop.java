@@ -6,7 +6,7 @@ class Person {
 
     static int numEyes;
 
-    final static int MAX_AGE = 60;
+    static final int MAX_AGE = 60;
 
     Person() {
         // this keyword, just like the super keyword, can also be used to call any matching constructor
